@@ -1,5 +1,5 @@
 class FunctionsController < ApplicationController
-  before_action :set_function, only: [:show, :edit, :update, :destroy]
+  before_action :set_function, only: [ :show, :edit, :update, :destroy ]
 
   def show
   end

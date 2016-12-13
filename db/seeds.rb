@@ -24,3 +24,11 @@ Beacon.create(uuid: "f7826da6-4fa2-4e98-8024-bc5b71e0893e",
               )
 
 puts "# BEACONS CARGADOS!"
+
+# Tabla: Beacon #########################################################################
+
+Semaforo.deleta_all
+
+Semaforo.create(estado: "rojo")
+
+puts "# SEMAFOROS CARGADOS!"
