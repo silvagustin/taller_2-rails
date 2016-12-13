@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161213124507) do
+ActiveRecord::Schema.define(version: 20161213151344) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -19,13 +19,13 @@ ActiveRecord::Schema.define(version: 20161213124507) do
     t.string   "uuid"
     t.string   "major"
     t.string   "minor"
-    t.integer  "funcion_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["funcion_id"], name: "index_beacons_on_funcion_id", using: :btree
+    t.integer  "function_id"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+    t.index ["function_id"], name: "index_beacons_on_function_id", using: :btree
   end
 
-  create_table "funcions", force: :cascade do |t|
+  create_table "functions", force: :cascade do |t|
     t.string   "nombre"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false

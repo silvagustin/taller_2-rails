@@ -13,7 +13,7 @@ class BeaconsController < ApplicationController
   end
 
   def create
-    @beacon = beacon_params
+    @beacon = Beacon.new(beacon_params)
 
     if @beacon.save
       redirect_to @beacon

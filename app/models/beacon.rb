@@ -1,3 +1,3 @@
 class Beacon < ApplicationRecord
-  belongs_to :funcion
+  belongs_to :function
 end

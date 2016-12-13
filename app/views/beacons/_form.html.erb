@@ -2,7 +2,7 @@
   <%= f.input :uuid %>
   <%= f.input :major %>
   <%= f.input :minor %>
-  <%= f.association :funcion, label_method: :nombre, value_method: :id, include_blank: false %>
+  <%= f.association :function, label_method: :nombre, value_method: :id, include_blank: false %>
 
   <%= f.button :submit %>
 <% end %>

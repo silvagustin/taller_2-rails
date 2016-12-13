@@ -4,10 +4,10 @@ one:
   uuid: MyString
   major: MyString
   minor: MyString
-  funcion: one
+  function: one
 
 two:
   uuid: MyString
   major: MyString
   minor: MyString
-  funcion: two
+  function: two

@@ -1,5 +1,7 @@
 <h1>Beacons#index</h1>
 
+<%= link_to 'Crear Beacon', new_beacon_path %>
+
 <table>
 
   <thead>
@@ -18,7 +20,7 @@
         <td><%= beacon.uuid %></td>
         <td><%= beacon.major %></td>
         <td><%= beacon.minor %></td>
-        <td><%= beacon.funcion.nombre %></td>
+        <td><%= beacon.function.nombre %></td>
 
         <td><%= link_to "Ver", beacon %></td>
         <td><%= link_to "Editar", edit_beacon_path(beacon) %></td>
@@ -28,3 +30,8 @@
   </tbody>
 
 </table>
+
+<br>
+<br>
+<%= link_to 'Beacons#index', beacons_path %> |
+<%= link_to 'Funciones#index', functions_path %>
