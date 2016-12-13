@@ -49,3 +49,4 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 # Gemas agregadas
 gem 'hirb', '~> 0.7.3'
+gem 'simple_form'

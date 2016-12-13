@@ -8,6 +8,7 @@
       <th>Major</th>
       <th>Minor</th>
       <th>Función</th>
+      <th colspan="3">Acción</th>
     </tr>
   </thead>
 
@@ -18,6 +19,10 @@
         <td><%= beacon.major %></td>
         <td><%= beacon.minor %></td>
         <td><%= beacon.funcion.nombre %></td>
+
+        <td><%= link_to "Ver", beacon %></td>
+        <td><%= link_to "Editar", edit_beacon_path(beacon) %></td>
+        <td><%= link_to "Eliminar", beacon, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>

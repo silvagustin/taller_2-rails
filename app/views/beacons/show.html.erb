@@ -1,2 +1,18 @@
 <h1>Beacons#show</h1>
-<p>Find me in app/views/beacons/show.html.erb</p>
+
+<h2>UUID</h2>
+<%= @beacon.uuid %>
+
+<h2>Major</h2>
+<%= @beacon.major %>
+
+<h2>Minor</h2>
+<%= @beacon.minor %>
+
+<h2>Funcion</h2>
+<%= @beacon.funcion.nombre %>
+
+
+<br>
+<br>
+<%= link_to 'Beacons#index', beacons_path %>
