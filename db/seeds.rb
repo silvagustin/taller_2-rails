@@ -27,8 +27,11 @@ puts "# BEACONS CARGADOS!"
 
 # Tabla: Beacon #########################################################################
 
-Semaforo.deleta_all
+Semaforo.delete_all
 
-Semaforo.create(estado: "rojo")
+beacon_id = Beacon.first.id
+
+Semaforo.create(estado: "rojo",
+                beacon_id: beacon_id)
 
 puts "# SEMAFOROS CARGADOS!"

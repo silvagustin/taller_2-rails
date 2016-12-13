@@ -33,10 +33,10 @@ ActiveRecord::Schema.define(version: 20161213164100) do
 
   create_table "semaforos", force: :cascade do |t|
     t.integer  "estado"
-    t.integer  "semaforo_id"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
-    t.index ["semaforo_id"], name: "index_semaforos_on_semaforo_id", using: :btree
+    t.integer  "beacon_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["beacon_id"], name: "index_semaforos_on_beacon_id", using: :btree
   end
 
 end
