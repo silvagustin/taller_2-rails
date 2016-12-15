@@ -3,7 +3,7 @@ class BeaconsController < ApplicationController
   before_action :set_beacon, only: [ :edit, :update, :destroy ]
 
   def show
-    @beacon = Beacon.find_by(nombre: params[:id])
+    @beacon = Beacon.find_by(nombre: params[:id]) || Beacon.find(params[:id])
 
     respond_to do |format|
       format.html
@@ -49,7 +49,7 @@ class BeaconsController < ApplicationController
   private
 
     def beacon_params
-      params.require(:beacon).permit(:uuid, :major, :minor, :funcion_id, :nombre)
+      params.require(:beacon).permit(:uuid, :major, :minor, :function_id, :nombre)
     end
 
     def set_beacon
