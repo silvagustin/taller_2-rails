@@ -20,12 +20,13 @@ Beacon.create(uuid: "f7826da6-4fa2-4e98-8024-bc5b71e0893e",
   # Major and Minor are unsigned integer values between 1 and 65535.
               major: '65535',
               minor: '1',
-              function_id: semaforo_id
+              function_id: semaforo_id,
+              nombre: "SEMAFORO-BLE"
               )
 
 puts "# BEACONS CARGADOS!"
 
-# Tabla: Beacon #########################################################################
+# Tabla: Semaforo #########################################################################
 
 Semaforo.delete_all
 

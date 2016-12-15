@@ -1,7 +1,14 @@
 class BeaconsController < ApplicationController
-  before_action :set_beacon, only: [ :show, :edit, :update, :destroy ]
+  #before_action :set_beacon, only: [ :show, :edit, :update, :destroy ]
+  before_action :set_beacon, only: [ :edit, :update, :destroy ]
 
   def show
+    @beacon = Beacon.find_by(nombre: params[:id])
+
+    respond_to do |format|
+      format.html
+      format.json { render json: @beacon }
+    end
   end
 
   def index
