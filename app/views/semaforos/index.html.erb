@@ -1,0 +1,35 @@
+<h1>Semaforos#index</h1>
+
+<%#= link_to 'Crear Semaforo', new_semaforo_path %>
+
+<table>
+
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>ID-Beacon</th>
+      <th>Estado</th>
+      <th colspan="3">Acción</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @semaforos.each do |semaforo| %>
+      <tr>
+        <td><%= semaforo.id %></td>
+        <td><%= semaforo.beacon.id %></td>
+        <td><%= semaforo.estado %></td>
+
+        <td><%#= link_to "Ver", semaforo %></td>
+        <td><%#= link_to "Editar", edit_semaforo_path(semaforo) %></td>
+        <td><%#= link_to "Eliminar", semaforo, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+
+</table>
+
+<br>
+<br>
+<%= link_to 'Beacons#index', beacons_path %> |
+<%= link_to 'Funciones#index', functions_path %>

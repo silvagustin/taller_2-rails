@@ -11,6 +11,10 @@ class SemaforosController < ApplicationController
     end
   end
 
+  def index
+    @semaforos = Semaforo.all
+  end
+
   private
 
     def set_semaforo
