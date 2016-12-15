@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161213164100) do
+ActiveRecord::Schema.define(version: 20161215150147) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -22,6 +22,7 @@ ActiveRecord::Schema.define(version: 20161213164100) do
     t.integer  "function_id"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
+    t.string   "nombre"
     t.index ["function_id"], name: "index_beacons_on_function_id", using: :btree
   end
 
