@@ -1,0 +1,5 @@
+<%= simple_form_for @semaforo do |f| %>
+  <%= f.association :beacon, label_method: :nombre, value_method: :id, include_blank: false %>
+
+  <%= f.button :submit %>
+<% end %>
