@@ -2,6 +2,10 @@ class FunctionsController < ApplicationController
   before_action :set_function, only: [ :show, :edit, :update, :destroy ]
 
   def show
+    respond_to do |format|
+      format.html
+      format.json { render json: @function }
+    end
   end
 
   def index
