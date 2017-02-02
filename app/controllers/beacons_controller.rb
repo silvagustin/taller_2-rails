@@ -49,7 +49,7 @@ class BeaconsController < ApplicationController
   private
 
     def beacon_params
-      params.require(:beacon).permit(:uuid, :major, :minor, :function_id, :nombre)
+      params.require(:beacon).permit(:uuid, :major, :minor, :function_id, :nombre, :nombre_largo)
     end
 
     def set_beacon

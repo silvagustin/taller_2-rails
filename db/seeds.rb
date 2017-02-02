@@ -21,7 +21,8 @@ Beacon.create(uuid: "f7826da6-4fa2-4e98-8024-bc5b71e0893e",
               major: '65535',
               minor: '1',
               function_id: semaforo_id,
-              nombre: "SEMAFORO-BLE"
+              nombre: "SEMAFORO-BLE",
+              nombre_largo: "NOMBRE-LARGO-DEL-SEMAFORO-BLE"
               )
 
 puts "# BEACONS CARGADOS!"
