@@ -5,6 +5,18 @@ class BeaconsController < ApplicationController
   def show
     @beacon = Beacon.find_by(nombre: params[:id]) || Beacon.find(params[:id])
 
+    if params[:mac_address].present?
+
+      if @dispositivo = Dispositivo.find_by(mac_address: params[:mac_address])
+        @dispositivo.actualizar_ultima_conexion!
+      else
+        Dispositivo.create(mac_address: params[:mac_address],
+                           beacon: @beacon,
+                           ultima_conexion: Time.now)
+      end
+
+    end
+
     respond_to do |format|
       format.html
       format.json { render json: @beacon }
@@ -49,7 +61,7 @@ class BeaconsController < ApplicationController
   private
 
     def beacon_params
-      params.require(:beacon).permit(:uuid, :major, :minor, :function_id, :nombre, :nombre_largo)
+      params.require(:beacon).permit(:uuid, :latitud, :longitud, :function_id, :nombre, :nombre_largo)
     end
 
     def set_beacon

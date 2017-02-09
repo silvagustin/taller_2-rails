@@ -18,10 +18,10 @@ semaforo_id = Function.find_by(nombre: "semaforo").id
 
 Beacon.create(uuid: "f7826da6-4fa2-4e98-8024-bc5b71e0893e",
   # Major and Minor are unsigned integer values between 1 and 65535.
-              major: '65535',
-              minor: '1',
+              latitud: '-34.9074893',
+              longitud: '-57.9459244',
               function_id: semaforo_id,
-              nombre: "SEMAFORO-BLE",
+              nombre: "s47y1",
               nombre_largo: "NOMBRE-LARGO-DEL-SEMAFORO-BLE"
               )
 

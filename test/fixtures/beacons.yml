@@ -2,12 +2,12 @@
 
 one:
   uuid: MyString
-  major: MyString
-  minor: MyString
+  latitud: MyString
+  longitud: MyString
   function: one
 
 two:
   uuid: MyString
-  major: MyString
-  minor: MyString
+  latitud: MyString
+  longitud: MyString
   function: two

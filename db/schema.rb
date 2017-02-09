@@ -10,15 +10,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170202130016) do
+ActiveRecord::Schema.define(version: 20170202192959) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "beacons", force: :cascade do |t|
     t.string   "uuid"
-    t.string   "major"
-    t.string   "minor"
+    t.string   "latitud"
+    t.string   "longitud"
     t.integer  "function_id"
     t.datetime "created_at",   null: false
     t.datetime "updated_at",   null: false
@@ -28,9 +28,12 @@ ActiveRecord::Schema.define(version: 20170202130016) do
   end
 
   create_table "dispositivos", force: :cascade do |t|
-    t.string   "mac"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.string   "mac_address"
+    t.integer  "beacon_id"
+    t.datetime "ultima_conexion"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+    t.index ["beacon_id"], name: "index_dispositivos_on_beacon_id", using: :btree
   end
 
   create_table "functions", force: :cascade do |t|
@@ -47,4 +50,5 @@ ActiveRecord::Schema.define(version: 20170202130016) do
     t.index ["beacon_id"], name: "index_semaforos_on_beacon_id", using: :btree
   end
 
+  add_foreign_key "dispositivos", "beacons"
 end

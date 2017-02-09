@@ -7,12 +7,13 @@
   <thead>
     <tr>
       <th>UUID</th>
-      <th>Major</th>
-      <th>Minor</th>
+      <th>Latitud</th>
+      <th>Longitud</th>
       <th>Nombre</th>
       <th>Nombre largo</th>
+      <th>Visitas</th>
       <th>Función</th>
-      <th colspan="3">Acción</th>
+      <th colspan="4">Acción</th>
     </tr>
   </thead>
 
@@ -20,12 +21,14 @@
     <% @beacons.each do |beacon| %>
       <tr>
         <td><%= beacon.uuid %></td>
-        <td><%= beacon.major %></td>
-        <td><%= beacon.minor %></td>
+        <td><%= beacon.latitud %></td>
+        <td><%= beacon.longitud %></td>
         <td><%= beacon.nombre %></td>
         <td><%= beacon.nombre_largo %></td>
+        <td><%= beacon.dispositivos.count %></td>
         <td><%= beacon.function.nombre %></td>
 
+        <td><%= link_to "Mapa", "https://www.google.com.ar/maps/dir//#{beacon.latitud},#{beacon.longitud}/" %></td>
         <td><%= link_to "Ver", beacon %></td>
         <td><%= link_to "Editar", edit_beacon_path(beacon) %></td>
         <td><%= link_to "Eliminar", beacon, method: :delete, data: { confirm: 'Are you sure?' } %></td>

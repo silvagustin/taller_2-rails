@@ -3,17 +3,20 @@
 <h2>UUID</h2>
 <%= @beacon.uuid %>
 
-<h2>Major</h2>
-<%= @beacon.major %>
+<h2>Latitud</h2>
+<%= @beacon.latitud %>
 
-<h2>Minor</h2>
-<%= @beacon.minor %>
+<h2>Longitud</h2>
+<%= @beacon.longitud %>
 
 <h2>Nombre</h2>
 <%= @beacon.nombre %>
 
 <h2>Nombre largo</h2>
 <%= @beacon.nombre_largo %>
+
+<h2>Visitas</h2>
+<%= @beacon.dispositivos.count %>
 
 <h2>Funcion</h2>
 <%= @beacon.function.nombre %>

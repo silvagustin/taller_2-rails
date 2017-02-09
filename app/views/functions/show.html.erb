@@ -16,8 +16,8 @@
       <thead>
         <tr>
           <th>UUID</th>
-          <th>Major</th>
-          <th>Minor</th>
+          <th>Latitud</th>
+          <th>Longitud</th>
         </tr>
       </thead>
 
@@ -25,8 +25,8 @@
         <% @function.beacons.each do |beacon| %>
           <tr>
             <td><%= beacon.uuid %></td>
-            <td><%= beacon.major %></td>
-            <td><%= beacon.minor %></td>
+            <td><%= beacon.latitud %></td>
+            <td><%= beacon.longitud %></td>
             <td><%= beacon.nombre %></td>
             <td><%= beacon.function.nombre %></td>
           </tr>

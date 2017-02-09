@@ -1,7 +1,7 @@
 <%= simple_form_for @beacon do |f| %>
   <%= f.input :uuid %>
-  <%= f.input :major %>
-  <%= f.input :minor %>
+  <%= f.input :latitud %>
+  <%= f.input :longitud %>
   <%= f.input :nombre %>
   <%= f.input :nombre_largo %>
   <%= f.association :function, label_method: :nombre, value_method: :id, include_blank: false %>
